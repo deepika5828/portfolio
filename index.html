@@ -12,16 +12,24 @@
 <body>
   <div class="portfolio-text">Portfolio</div>
 
-  <header>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a> 
-      <a href="#education">Education</a>
-      <a href="#skills">Skills</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
+<header>
+    <div class="portfolio-text">PORTFOLIO</div>
+    <nav class="navbar">
+        <div class="nav-links">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="#education">Education</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+            <a href="#contact">Contact</a>
+        </div>
+        <div class="hamburger">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
     </nav>
-  </header>
+</header>
 
   <div class="container" id="home">
     <div class="intro">
@@ -254,6 +262,13 @@
   }
   typeEffect();
 
+
+const hamburger = document.querySelector('.hamburger');
+const navLinks = document.querySelector('.nav-links');
+
+hamburger.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+});
   function revealOnScroll() {
     const reveals = document.querySelectorAll(".reveal");
 

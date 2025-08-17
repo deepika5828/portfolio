@@ -7,6 +7,81 @@
       min-height: 100vh;
     }
 
+.portfolio-text {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: center; 
+    padding: 1rem 2rem; 
+}
+.nav-links {
+    display: flex;
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 0 15px;
+    font-size: 1rem;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        background-color: #1a1a36; 
+        position: absolute;
+        top: 60px; 
+        left: 0;
+        z-index: 10;
+    }
+
+    .nav-links a {
+        padding: 15px 20px;
+        text-align: center;
+        width: 100%;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .hamburger {
+        display: block; 
+        cursor: pointer;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    
+    .hamburger .bar {
+        width: 25px;
+        height: 3px;
+        background-color: #fff;
+        margin: 5px 0;
+        transition: all 0.3s ease;
+    }
+
+    
+    .nav-links.active {
+        display: flex;
+    }
+}
+
     header {
       width: 100%;
       padding: 24px 0;
